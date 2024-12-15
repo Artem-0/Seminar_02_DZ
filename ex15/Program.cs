@@ -6,11 +6,18 @@
 System.Console.WriteLine("Введите номер дня недели: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
-if (a == 6 || a == 7)
+if (a > 0 && a < 8)
 {
-    System.Console.WriteLine("Да");
+    if (a == 6 || a == 7)
+    {
+        System.Console.WriteLine("Да");
+    }
+    else
+    {
+        System.Console.WriteLine("Нет");
+    }
 }
 else
 {
-    System.Console.WriteLine("Нет");
+    System.Console.WriteLine("Такого дня недели не существует!");
 }
