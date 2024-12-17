@@ -6,19 +6,15 @@
 Console.WriteLine("Введите число: ");
 int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
-if (number < 100)
+if (number > 99)
 {
-    System.Console.WriteLine("Третьей цифры нет!");
-}
-else if (number < 1000)
-{
-    System.Console.WriteLine($"Третья цифра числа: {number%10}");
-}
-else
-{
-    while (number >= 1000)
+    while (number > 999)
      {
      number = number / 10;
      }
     System.Console.WriteLine($"Третья цифра числа: {number%10}");
+}
+else
+{
+    System.Console.WriteLine("Вы ввели не трёхзначное число!");
 }
